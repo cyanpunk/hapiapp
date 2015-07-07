@@ -1,3 +1,5 @@
+'use strict';
+
 var Hapi = require('hapi');
 var Slm = require('slm');
 var SlmMarkdown = require('slm-markdown');
@@ -6,7 +8,10 @@ SlmMarkdown.register(Slm.template);
 
 var server = new Hapi.Server();
 
-server.connection({ host: 'node.dev', port: 1337 });
+server.connection({
+  host: 'node.dev',
+  port: process.env.PORT || 1337
+});
 
 server.views({
   engines: {
