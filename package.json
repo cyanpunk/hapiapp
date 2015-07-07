@@ -14,6 +14,8 @@
   "author": "Austris Landmanis <austris@chevron.lv>",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.1.2",
+    "colorterm": "cyanpunk/colorterm",
     "hapi": "^8.8.0",
     "slm": "^0.4.1",
     "slm-markdown": "^1.0.0"

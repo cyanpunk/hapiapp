@@ -1,11 +1,14 @@
 'use strict';
 
+var Colors = require('colors');
+var Colorterm = require('colorterm');
 var Hapi = require('hapi');
 var Slm = require('slm');
 var SlmMarkdown = require('slm-markdown');
 
 SlmMarkdown.register(Slm.template);
 
+var console = Colorterm();
 var server = new Hapi.Server();
 
 server.connection({
@@ -39,6 +42,10 @@ server.route({
 });
 
 server.start(function () {
-  console.log('Server running at:', server.info.uri);
+  console.log('Server running at: %s', server.info.uri.blue);
+  console.info('Server running at: %s', server.info.uri.blue);
+  console.warn('Server running at: %s', server.info.uri.blue);
+  console.error('Server running at: %s', server.info.uri.blue);
+  // console.dir( {bar: "This is a console.dir message"} );
   // server.log('Server started at ' + server.info.uri)
 });
