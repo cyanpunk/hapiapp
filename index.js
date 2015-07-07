@@ -12,9 +12,13 @@ server.views({
   engines: {
     'slm': Slm
   },
+  // Commented out, cause some Error
+  // TODO: Create new issue on GitHub
   // basePath: __dirname,
   path: __dirname + '/views',
   compileOptions: {
+    // Commented out, cause some Error
+    // TODO: Create new issue on GitHub
     // basePath: __dirname + '/views',
     useCache: false
   },
@@ -24,8 +28,8 @@ server.views({
 server.route({
   method: 'GET',
   path: '/',
-  handler: function (request, response) {
-    response.view('index', { hello: "word" });
+  handler: function (request, reply) {
+    reply.view('index', { hello: "word" });
   }
 });
 
