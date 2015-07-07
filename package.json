@@ -1,0 +1,21 @@
+{
+  "name": "hapiapp",
+  "version": "0.1.0",
+  "description": "Test Hapi framework integration with other modules",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://"
+  },
+  "author": "Austris Landmanis <austris@chevron.lv>",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^8.8.0",
+    "slm": "^0.4.1",
+    "slm-markdown": "^1.0.0"
+  }
+}
