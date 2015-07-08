@@ -8,7 +8,7 @@ var SlmMarkdown = require('slm-markdown');
 
 SlmMarkdown.register(Slm.template);
 
-var console = Colorterm();
+var console = new Colorterm();
 var server = new Hapi.Server();
 
 server.connection({
@@ -42,10 +42,12 @@ server.route({
 });
 
 server.start(function () {
-  console.log('Server running at: %s', server.info.uri.blue);
-  console.info('Server running at: %s', server.info.uri.blue);
-  console.warn('Server running at: %s', server.info.uri.blue);
-  console.error('Server running at: %s', server.info.uri.blue);
-  // console.dir( {bar: "This is a console.dir message"} );
+  console.log('Server successfully started...');
+  console.info('Server successfully started...');
+  console.warn('Server successfully started...');
+  console.error('Server successfully started...');
+  // console.dir( {bar: "This is a console.dir message", test: "yo", username: 'rafeca', url: 'https://github.com/rafeca', twitter_account: 'https://twitter.com/rafeca', projects: ['prettyprint', 'connfu'] } );
+  console.dir(server.info);
+  console.log('oh yeah!')
   // server.log('Server started at ' + server.info.uri)
 });
