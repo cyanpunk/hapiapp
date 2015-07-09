@@ -16,8 +16,9 @@
   "dependencies": {
     "colors": "^1.1.2",
     "colorterm": "cyanpunk/colorterm",
+    "good": "^6.2.0",
+    "good-console": "^5.0.2",
     "hapi": "^8.8.0",
-    "slm": "^0.4.1",
-    "slm-markdown": "^1.0.0"
+    "jade": "^1.11.0"
   }
 }
