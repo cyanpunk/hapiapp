@@ -3,7 +3,8 @@
 var Colors = require('colors');
 var Colorterm = require('colorterm');
 var Good = require('good');
-var GoodConsole = require('good-console');
+// var GoodConsole = require('good-console');
+var GoodColorterm = require('good-colorterm');
 var Hapi = require('hapi');
 var Jade = require('jade');
 // var Slm = require('slm');
@@ -11,7 +12,7 @@ var Jade = require('jade');
 
 // SlmMarkdown.register(Slm.template);
 
-var console = new Colorterm('app');
+var console = new Colorterm();
 var server = new Hapi.Server();
 
 server.connection({
@@ -47,11 +48,21 @@ server.route({
   }
 });
 
+server.route({
+  method: 'GET',
+  path: '/500',
+  config: {
+    handler: function (request, reply) {
+      reply.view('indexdd', { hello: "word" });
+    }
+  }
+});
+
 var options = {
   opsInterval: 60000,
   reporters: [
     {
-      reporter: GoodConsole,
+      reporter: GoodColorterm,
       events: {
         ops: '*',
         error: '*',
@@ -87,13 +98,15 @@ server.register({
   }
   else {
     server.start(function () {
-      console.log('Server successfully started...');
-      console.info('Server successfully started...');
-      console.warn('Server successfully started...');
-      console.error('Server successfully started...');
-      console.dir(server.info);
-      server.log('server',{data: "fsdfs"});
-      server.lookup('root');
+      console.log('Server successfully started');
+      // console.info('Server successfully started');
+      // console.warn('Server successfully started');
+      // console.error('Server successfully started');
+      // console.dir(server.info);
+      // server.log(['hello', 'fff'], 'sdfsdfsd')
+      // server.log('hello', { data: "fsdfsd" });
+      // server.log('server',{data: "fsdfs"});
+      // server.lookup('root');
     });
   }
 });

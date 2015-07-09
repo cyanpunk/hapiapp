@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://"
+    "url": "git+https://github.com/cyanpunk/hapiapp.git"
   },
   "author": "Austris Landmanis <austris@chevron.lv>",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
-    "colorterm": "cyanpunk/colorterm_",
+    "colorterm": "cyanpunk/colorterm",
     "good": "^6.2.0",
-    "good-console": "cyanpunk/good-console",
+    "good-colorterm": "cyanpunk/good-colorterm",
     "hapi": "^8.8.0",
     "jade": "^1.11.0"
   }
