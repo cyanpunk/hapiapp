@@ -98,12 +98,14 @@ server.register({
   }
   else {
     server.start(function () {
-      console.log('Server successfully started');
+      console.log('This is console log string');
+      console.log('This is console log string');
+      console.log('This is console log string');
       // console.info('Server successfully started');
       // console.warn('Server successfully started');
       // console.error('Server successfully started');
       // console.dir(server.info);
-      // server.log(['hello', 'fff'], 'sdfsdfsd')
+      server.log('tooo', 'This is server log object');
       // server.log('hello', { data: "fsdfsd" });
       // server.log('server',{data: "fsdfs"});
       // server.lookup('root');
