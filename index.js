@@ -11,7 +11,7 @@ var Jade = require('jade');
 
 // SlmMarkdown.register(Slm.template);
 
-var console = new Colorterm();
+var console = new Colorterm('app');
 var server = new Hapi.Server();
 
 server.connection({
@@ -39,13 +39,16 @@ server.views({
 server.route({
   method: 'GET',
   path: '/',
-  handler: function (request, reply) {
-    reply.view('index', { hello: "word" });
+  config: {
+    id: 'root',
+    handler: function (request, reply) {
+      reply.view('index', { hello: "word" });
+    }
   }
 });
 
 var options = {
-  opsInterval: 15000,
+  opsInterval: 60000,
   reporters: [
     {
       reporter: GoodConsole,
@@ -84,9 +87,13 @@ server.register({
   }
   else {
     server.start(function () {
-      console.info('Server started successfully.');
+      console.log('Server successfully started...');
+      console.info('Server successfully started...');
+      console.warn('Server successfully started...');
+      console.error('Server successfully started...');
       console.dir(server.info);
-      server.log({data: "fsdfs"});
+      server.log('server',{data: "fsdfs"});
+      server.lookup('root');
     });
   }
 });

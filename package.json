@@ -17,7 +17,7 @@
     "colors": "^1.1.2",
     "colorterm": "cyanpunk/colorterm",
     "good": "^6.2.0",
-    "good-console": "^5.0.2",
+    "good-console": "cyanpunk/good-console",
     "hapi": "^8.8.0",
     "jade": "^1.11.0"
   }
