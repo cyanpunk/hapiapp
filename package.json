@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
-    "colorterm": "cyanpunk/colorterm",
+    "colorterm": "cyanpunk/colorterm_",
     "good": "^6.2.0",
     "good-console": "cyanpunk/good-console",
     "hapi": "^8.8.0",
