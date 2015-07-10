@@ -1,12 +1,11 @@
 'use strict';
 
+var Hapi = require('hapi');
+var Good = require('good');
+var Jade = require('jade');
 var Colors = require('colors');
 var Colorterm = require('colorterm');
-var Good = require('good');
-// var GoodConsole = require('good-console');
 var GoodColorterm = require('good-colorterm');
-var Hapi = require('hapi');
-var Jade = require('jade');
 // var Slm = require('slm');
 // var SlmMarkdown = require('slm-markdown');
 
@@ -98,13 +97,15 @@ server.register({
   }
   else {
     server.start(function () {
-      console.log('This is console log string');
-      console.log('This is console log string');
-      console.log('This is console log string');
-      // console.info('Server successfully started');
-      // console.warn('Server successfully started');
-      // console.error('Server successfully started');
-      // console.dir(server.info);
+      console.log('This is standard log by console.log(string)');
+      console.info('This is standard info by console.info(string)');
+      console.warn('This is standard warn by console.warn(string)');
+      console.error('This is standard error by console.error(string)');
+      console.error(server.info);
+      console.dir('This is standard dir by console.dir(string)');
+      console.dir(server.info);
+      console.trace('This is standard trace by console.trace(string)');
+      console.trace(server.info);
       server.log('tooo', 'This is server log object');
       // server.log('hello', { data: "fsdfsd" });
       // server.log('server',{data: "fsdfs"});
