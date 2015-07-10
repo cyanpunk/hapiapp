@@ -97,16 +97,17 @@ server.register({
   }
   else {
     server.start(function () {
+      console.dir( {bar: "This is a console.dir message", test: "yo", username: 'rafeca', url: 'https://github.com/rafeca', twitter_account: 'https://twitter.com/rafeca', projects: ['prettyprint', 'connfu'], lalala: [] } );
       console.log('This is standard log by console.log(string)');
-      console.info('This is standard info by console.info(string)');
-      console.warn('This is standard warn by console.warn(string)');
-      console.error('This is standard error by console.error(string)');
-      console.error(server.info);
-      console.dir('This is standard dir by console.dir(string)');
-      console.dir(server.info);
-      console.trace('This is standard trace by console.trace(string)');
-      console.trace(server.info);
-      server.log('tooo', 'This is server log object');
+      // console.info('This is standard info by console.info(string)');
+      // console.warn('This is standard warn by console.warn(string)');
+      // console.error('This is standard error by console.error(string)');
+      // console.error(server.info);
+      // console.dir('This is standard dir by console.dir(string)');
+      // console.dir(server.info);
+      // console.trace('This is standard trace by console.trace(string)');
+      // console.trace(server.info);
+      // server.log('tooo', 'This is server log object');
       // server.log('hello', { data: "fsdfsd" });
       // server.log('server',{data: "fsdfs"});
       // server.lookup('root');
