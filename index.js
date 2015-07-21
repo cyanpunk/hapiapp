@@ -1,15 +1,20 @@
 'use strict';
 
+// require('pretty-error').start();
+
 var Hapi = require('hapi');
 var Good = require('good');
 var Jade = require('jade');
 var Colors = require('colors');
 var Colorterm = require('colorterm');
 var GoodColorterm = require('good-colorterm');
+var GoodConsole = require('good-console');
 // var Slm = require('slm');
 // var SlmMarkdown = require('slm-markdown');
 
 // SlmMarkdown.register(Slm.template);
+
+// Error.prepareStackTrace = function () { };
 
 var console = new Colorterm();
 var server = new Hapi.Server();
@@ -91,7 +96,6 @@ server.register({
   register: Good,
   options: options
 }, function (err) {
-
   if (err) {
     console.error(err);
   }
